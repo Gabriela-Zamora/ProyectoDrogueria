@@ -1,0 +1,110 @@
+body{
+    background-image: url("../static/images/fondodrogeria.png");
+    background-size:1930px 1000px;
+    background-repeat: no-repeat;
+    font-family: 'Patrick Hand', cursive;
+    font-family: cursive;
+    margin: 0;
+}
+section{
+    margin: 10% 41%;
+    padding: 122px 30px;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: solid rgba(0, 0, 0, 0.87);
+    background-image: url("../static/images/DIP.png");
+    background-size: 90px;
+    background-position-x: center;
+    background-position-y: 508px;
+    background-repeat: no-repeat;
+
+}
+
+
+.imgUsuario{
+    height: 100px;
+}
+
+button{
+    background-color: red;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    margin: 10px;
+    padding: 11px;
+    color: black;
+}
+
+button:hover{
+    color: white;
+    border: 1px solid white;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    color: rgb(0, 0, 0);
+}
+input{
+    border-radius: 6px;
+    border: none;
+    padding: 6px;
+    width: 250px;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.678);
+    float: left;
+    width: 1902px;
+    margin-top: -189px;
+    margin-left: -8px;
+}
+
+.dip{
+    height: 100px;
+}
+.ayuda{
+    float: right;
+    text-align: left;
+    height: 30px;
+    font-size: 10px;
+    padding-right: 30px;
+}
+
+.encabezado{
+    background-color: rgba(0, 0, 0, 0.678);
+    float: left;
+    width: 1920px;
+}
+
+#enlaces{
+    background-color: #0096db96;
+    margin-top: -18px;
+    padding: 8px;
+    text-align: center;
+    width: 105%;
+}
+.clear{
+    clear: both;
+}
+
+#enlaces a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 8px 40px;
+        border: 1px solid;
+    }
+
+#empleado_pago{
+    float: left;
+    margin-top: 50px;
+}
+
+#zona_pagos{
+    border: aqua;
+}

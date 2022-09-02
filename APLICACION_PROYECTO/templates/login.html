@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estilo.css">
+    <link rel="shortcut icon" href="/static/images/DIP.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+</head>
+
+<body>
+    <header>
+        <img src="/static/images/logooriginal.png" alt="" class="dip">
+        <p class="ayuda"><a href="ayuda.html"><img src="/static/images/ayuda.png" class="ayuda"><br>ayuda</a></p>
+    </header>
+
+    <section>
+        <img src="/static/images/imagen-usuario.png" alt="" class="imgUsuario"> <br><br>
+        INICIA SESIÓN CON TU CUENTA <br> <br><br>
+
+    <form id="loginform" action='/inicio_sesion' method="POST">
+        <input type="texto" name="usuario" placeholder="Usuario" required> <br> <br>
+        <input type="password" name="password" placeholder="password" required> <br>
+        <button type="submit" title="Ingresar" name="Ingresar">Ingresar</button>
+    </form>
+    {% if user!=undefined %}
+    {% if user==None %}
+        <label style="color: rgb(255, 255, 255);">Email y/o contraseña incorrectas, Intentelo nuevamente </label>
+    {%endif%}
+    {%endif%}
+        <br><br>
+        <a href="registrar">Registrate</a>
+
+    </section>
+</body>
+
+</html>

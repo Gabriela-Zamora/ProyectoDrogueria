@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estiloPagos.css">
+    <link rel="shortcut icon" href="/static/images/DIP.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+    <form action="pagoTotal" method="POST"></form>
+</head>
+
+<body>
+    <div class="encabezado">
+        <img src="/static/images/logooriginal.png" alt="" class="dip">
+        <p class="ayuda"><a href="ayuda.html"><img src="/static/images/ayuda.png" class="ayuda"><br>ayuda</a></p>
+    </div>
+    <div class="clear"></div>
+    <br>
+
+    <div>
+        {% if user!=undefined %}
+        {% if user.tipo==1 %}
+        <b>Administrador: {{user.nombre}}</b>
+        {%else%}
+        <b>Usuario: {{user.nombre}}</b>
+        {% endif%}
+        {% endif%}
+    </div>
+
+    <div id="enlaces">
+        <a href="inicioJefe">Inicio</a>
+        <a href="pago">Pago Empleados</a>
+
+        <a href="gestionar_empleados">Empleados</a>
+        {% if user!=undefined %}
+        {% if user.tipo==1 %}
+        <a href="documentacion">Documentacion Legal</a>
+        {% endif%}
+        {% endif%}
+
+        <a href="/">Salir</a>
+    </div >
+    <form action="pagoTotal" method="POST">
+    <div id="datosPago">
+        <section id="sectEmpleado">
+            <div id="empleado_pago">
+                <p id="TextEmpleado">nombre del empleado: </p> <br>
+                <input type="text" placeholder="empleado" name="empleado" required id="empleado">
+            </div>
+        </section>
+        <section id="sectSalario">
+            <div id="salario">
+                <h1>salario: </h1> <br>
+                <input type="number" step="any" name="salario" placeholder="salario base" id="salarioText">
+            </div>
+        </section>
+        <div class="clear"></div>
+        <section id="sectComicion">
+            <div id="comiciones">
+                <h1>comisiones: </h1> <br>
+                <input type="number" step="any" name="comiciones" placeholder="total de comiciones" id="comicionesText">
+            </div>
+        </section>
+        <div class="clear"></div>
+        <div id="posBoton">
+            <button id="boton_pago">
+                calcular pago
+            </button>
+        </div>
+    </div>
+    </form>
+    <div>
+        <section>
+            <h2 id="titulo_salario">SALARIO TOTAL</h2>
+            <div id="pago_total">
+                {% if data!=undefined %}
+                <h2 id="textResultado">El empleado {{ data.empleado }} obtuvo un salario total de {{ data.resultado }}
+                </h2>
+                {% endif %}
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

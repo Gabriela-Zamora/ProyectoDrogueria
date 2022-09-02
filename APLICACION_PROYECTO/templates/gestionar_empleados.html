@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estilo.css">
+    <link rel="shortcut icon" href="/static/images/DIP.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+</head>
+
+<body>
+    <div class="encabezado">
+        <img src="/static/images/logooriginal.png" alt="" class="dip">
+        <p class="ayuda"><a href="ayuda.html"><img src="/static/images/ayuda.png" class="ayuda"><br>ayuda</a></p>
+    </div>
+    <div class="clear"></div>
+    <br>
+    <div>
+        {% if user!=undefined %}
+        {% if user.tipo==1 %}
+        <b>Administrador: {{user.nombre}}</b>
+        {%else%}
+        <b>Usuario: {{user.nombre}}</b>
+        {% endif%}
+        {% endif%}
+    </div>
+
+    <div id="enlaces">
+        <a href="inicioJefe">Inicio</a>
+        <a href="pago">Pago Empleados</a>
+
+        <a href="gestionar_empleados">Empleados</a>
+        {% if user!=undefined %}
+        {% if user.tipo==1 %}
+        <a href="documentacion">Documentacion Legal</a>
+        {% endif%}
+        {% endif%}
+
+        <a href="/">Salir</a>
+    </div>
+
+    <div class="titulo">
+        Gestionar Empleado
+    </div>
+    <form id="loginform" action='/valida_usuarios' method='POST'>
+        <form>
+            <div class="campos">
+                <div class="campo_buscar">
+                    <div>
+                        {% if usuario!=undefined %}
+                        <input type="text" id="documento" name="documento" value="{{ usuario.documento }}"
+                            placeholder="Documento" required>
+                        {% else %}
+                        <input type="text" id="documento" name="documento" placeholder="Documento" required>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <button type="submit" title="Buscar" name="buscar">Buscar</button>
+                    </div>
+                </div>
+                <div class="camposCentrales">
+                    <div>
+                        {% if usuario!=undefined %}
+                        <input type="text" id="nombre" name="nombre" value="{{ usuario.nombre }}" placeholder="Nombre">
+                        {% else %}
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        {% endif %}
+                    </div>
+                    <div>
+                        {% if usuario!=undefined %}
+                        <input type="text" id="telefono" name="telefono" value="{{ usuario.telefono }}"
+                            placeholder="Telefono">
+                        {% else %}
+                        <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+                        {% endif %}
+
+                    </div>
+                    <div>
+                        {% if usuario!=undefined %}
+                        <input type="text" id="email" name="email" value="{{ usuario.email }}" placeholder="Email">
+                        {% else %}
+                        <input type="email" name="email" placeholder="Email">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="opciones">
+                    <div>
+                        {% if usuario!=undefined %}
+                        {% if usuario.tipo==1 %}
+                        <select name="tipo">
+                            <option value=1 selected>Administrador</option>
+                            <option value=2>Usuario</option>
+                        </select>
+                        {%else%}
+                        <select name="tipo">
+                            <option value=1>Administrador</option>
+                            <option value=2 selected>Usuario</option>
+                        </select>
+                        {% endif%}
+                        {% else %}
+                        <select name="tipo">
+                            <option value=1>Administrador</option>
+                            <option value=2 selected>Usuario</option>
+                        </select>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="opciones2">
+                    {% if usuario!=undefined %}
+                    <labe>{{ usuario.resultado }}</label>
+                        {% endif %}
+
+                </div>
+                <div class="botones_gestion">
+                    <div>
+                        <td> <button type="submit" title="Registrar" name="registrar">Registrar</button></td>
+                    </div>
+                    <div>
+                        <td> <button type="submit" title="Actualizar" name="actualizar">Actualizar</button></td>
+                    </div>
+                    <div>
+                        <td> <button type="submit" title="Eliminar" name="eliminar">Eliminar</button></td>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </form>
+
+    <div id="contenedor">
+        <div id="centralForm">
+            <div id="tabla_sola">
+
+                {% if data!=undefined %}
+                <h3>Empleados registrados</h3>
+                <table>
+                    <tr>
+                        {% for titulo in titulos_tabla %}
+                        <th>{{titulo}}</th>
+                        {%endfor%}
+                    </tr>
+                    {% for filas in data %}
+                    <tr>
+                        {% for i in range(filas|length) %}
+                        {% if i!=4 %}
+                        <td>{{filas[i]}}</td>
+                        {%endif%}
+                        {%endfor%}
+                    </tr>
+                    {%endfor%}
+                </table>
+                {%else%}
+                <h3>Por favor, diligencie el formulario</h3>
+                {%endif%}
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

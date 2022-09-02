@@ -1,0 +1,194 @@
+body{
+    background-image: url("../static/images/fondodrogeria.png");
+    background-size:1930px 1000px;
+    background-repeat: no-repeat;
+    font-family: 'Patrick Hand', cursive;
+    font-family: cursive;
+    margin: 0;
+}
+section{
+    margin: 9% 41%;
+    padding: 122px 30px;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: solid rgba(0, 0, 0, 0.87);
+    background-image: url("../static/images/DIP.png");
+    background-size: 90px;
+    background-position-x: center;
+    background-position-y: 508px;
+    background-repeat: no-repeat;
+
+}
+
+
+.imgUsuario{
+    height: 100px;
+}
+
+button{
+    background-color: #0096db;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    margin: 10px;
+    padding: 11px;
+    color: black;
+}
+
+button:hover{
+    color: white;
+    border: 1px solid white;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    color: rgb(0, 0, 0);
+}
+input{
+    border-radius: 6px;
+    border: none;
+    padding: 6px;
+    width: 147px;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.678);
+    float: left;
+    width: 1920px;
+    margin-top: -173px;
+}
+
+.dip{
+    height: 100px;
+}
+.ayuda{
+    float: right;
+    text-align: left;
+    height: 30px;
+    font-size: 10px;
+    padding-right: 30px;
+}
+
+.encabezado{
+    background-color: rgba(0, 0, 0, 0.678);
+    float: left;
+    width: 1920px;
+}
+
+#enlaces{
+    background-color: #0096db96;
+    margin-top: -18px;
+    padding: 8px;
+    text-align: center;
+    width: 105%;
+}
+.clear{
+    clear: both;
+}
+
+#enlaces a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 8px 40px;
+        border: 1px solid;
+    }
+
+
+.registro{
+    margin: 2% 41%;
+    padding: 0px 30px 116px 30px;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: solid rgba(0, 0, 0, 0.87);
+    background-image: url("../static/images/DIP.png");
+    background-size: 90px;
+    background-position-x: center;
+    background-position-y: 435px;
+    background-repeat: no-repeat;
+}
+
+#centralForm{
+    float: right;
+}
+
+
+#tabla_sola {
+    width: 100%;
+    padding: 5px 5px;
+    background-color: #ffffff77;
+    margin-top: -34%;
+    margin-right: 16%;
+    box-sizing: border-box;
+    float: right;
+    border-radius: 10px;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+th,tr,td{
+	border:1px solid #000;
+	width:150px;
+	height:30px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+th{
+	color:#fff;
+	background-color: #314853;
+}
+
+tr:nth-child(odd) td{
+	background-color:#eee;
+}
+
+.campos{
+    background-color: #0096dba2;
+    width: 40%;
+    margin-top: 48px;
+    margin-left: 102px;
+    padding: 14px;
+    border-radius: 47px;
+}
+
+.campo_buscar{
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+}
+
+.camposCentrales{
+    display: flex;
+}
+
+.botones_gestion{
+    display: flex;
+}
+
+.opciones{
+    display: flex;
+    background-color: #0096dbc2;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.opciones2{
+    display: flex;
+    background-color: rgba(0, 0, 255, 0.336);
+    border-radius: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+}

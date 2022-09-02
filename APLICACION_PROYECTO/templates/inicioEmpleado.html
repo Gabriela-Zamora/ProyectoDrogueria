@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estilo.css">
+    <link rel="shortcut icon" href="/static/images/DIP.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+</head>
+
+<body>
+    <div class="encabezado">
+        <img src="/static/images/logooriginal.png" alt="" class="dip">
+        <p class="ayuda"><a href="ayuda.html"><img src="/static/images/ayuda.png" class="ayuda"><br>ayuda</a></p>
+    </div>
+    <div class="clear"></div>
+    <br>
+
+    <div id="enlaces">
+        <a href="inicio">Inicio</a>
+        <a href="gestion_simple">Gestion Simple</a>
+        <a href="gestion_usuario">Gestion Con Tabla</a>
+        <a href="consulta">Consultar</a>
+        <a href="/">Salir</a>
+    </div>
+    <section>
+        <div id="contenedor">
+            <div id="centralForm">
+                <div id="formulario">
+                    <div class="titulo">
+                        {% if user!=undefined %}
+                        {% if user.tipo==1 %}
+                        <h2>Bienvenido al Sistema Administrador {{user.nombre}}</h2>
+                        {%else%}
+                        <h2>Bienvenido al Sistema Usuario {{user.nombre}}</h2>
+                        {% endif%}
+                        {% endif%}
+                    </div>
+                    <div class="titulo">
+                        Navegue desde el menú superior
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

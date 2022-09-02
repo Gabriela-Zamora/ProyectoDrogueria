@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estiloPagos.css">
+    <link rel="shortcut icon" href="/static/images/DIP.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+    <form action="pagoTotal" method="POST"></form>
+</head>
+
+<body>
+    <div class="encabezado">
+        <img src="/static/images/logooriginal.png" alt="" class="dip">
+        <p class="ayuda"><a href="ayuda.html"><img src="/static/images/ayuda.png" class="ayuda"><br>ayuda</a></p>
+    </div>
+    <div class="clear"></div>
+    <br>
+
+    <div>
+        {% if user!=undefined %}
+        {% if user.tipo==1 %}
+        <b>Administrador: {{user.nombre}}</b>
+        {%else%}
+        <b>Usuario: {{user.nombre}}</b>
+        {% endif%}
+        {% endif%}
+    </div>
+
+    <div id="enlaces">
+        <a href="inicioJefe">Inicio</a>
+        <a href="pago">Pago Empleados</a>
+
+        <a href="gestionar_empleados">Empleados</a>
+        {% if user!=undefined %}
+        {% if user.tipo==1 %}
+        <a href="documentacion">Documentacion Legal</a>
+        {% endif%}
+        {% endif%}
+
+        <a href="/">Salir</a>
+    </div >
+    
+        <section>
+            <h2 id="titulo_salario">documentacion</h2>
+            <div id="documentacion">
+                
+                <h2 id="textDocumento">inserte aqui los documentos a guardar
+                </h2>
+               
+            </div>
+        </section>
+        <div class="clear"></div>
+        <section>
+            <div>
+                <img src="/static/images/pdf.jpg" id="pdf">
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estiloJefe.css">
+    <link rel="shortcut icon" href="/static/images/DIP.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+</head>
+
+<body>
+    <div class="encabezado">
+        <img src="/static/images/logooriginal.png" alt="" class="dip">
+        <p class="ayuda"><a href="ayuda.html"><img src="/static/images/ayuda.png" class="ayuda"><br>ayuda</a></p>
+    </div>
+    <div class="clear"></div>
+    <br>
+    <nav class="navbar navbar-dark" style="background-color: #0B2161;">
+        <a class="navbar-brand" href="#">GESTION DE EMPLEADOS</a>
+    </nav>
+
+    <br></br><br></br>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <h5 class="card-header">Login</h5>
+                    <div class="card-body">
+                        <h:form>
+
+                            <div class="form-group row">
+                                <label for="user" class="col-md-4 col-form-label text-md-right">Usuario</label>
+                                <div class="col-md-6">
+                                    <h:inputText class="form-control" value="#{loginBean.empleadoVo.documento}"
+                                        id="user" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <h:inputSecret value="#{loginBean.empleadoVo.password}" class="form-control"
+                                        id="password" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <h:commandButton action="#{loginBean.validarUsuario()}" class="btn btn-primary"
+                                    value="Ingresar" />
+                                <a href="#" class="btn btn-link">
+                                    Olvidó su contraseña
+                                </a>
+                            </div>
+
+                        </h:form>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+                <h:panelGroup rendered="#{loginBean.mostrarError}">
+                    <div class="alert alert-danger" role="alert">
+                        <div class="form-group row">
+                            <h:outputLabel class="col-md-12" value="#{loginBean.mensaje}" />
+                        </div>
+                    </div>
+                </h:panelGroup>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+body{
+    background-image: url("../static/images/fondodrogeria.png");
+    background-size:1930px 1000px;
+    background-repeat: no-repeat;
+    font-family: 'Patrick Hand', cursive;
+    font-family: cursive;
+    margin: 0;
+    background-attachment: fixed;
+}
+section{
+    
+    background-repeat: no-repeat;
+
+}
+
+
+.imgUsuario{
+    height: 100px;
+}
+
+button{
+    background-color: red;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    margin: 10px;
+    padding: 11px;
+    color: black;
+}
+
+button:hover{
+    color: white;
+    border: 1px solid white;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    color: rgb(0, 0, 0);
+}
+input{
+    border-radius: 6px;
+    border: none;
+    padding: 6px;
+    width: 250px;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.678);
+    float: left;
+    width: 1902px;
+    margin-top: -189px;
+    margin-left: -8px;
+}
+
+.dip{
+    height: 100px;
+}
+.ayuda{
+    float: right;
+    text-align: left;
+    height: 30px;
+    font-size: 10px;
+    padding-right: 30px;
+}
+
+.encabezado{
+    background-color: rgba(0, 0, 0, 0.678);
+    float: left;
+    width: 1920px;
+}
+
+#enlaces{
+    background-color: #0096db96;
+    margin-top: -18px;
+    padding: 8px;
+    text-align: center;
+    width: 1904px;
+}
+.clear{
+    clear: both;
+}
+
+#enlaces a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 8px 40px;
+        border: 1px solid;
+    }
+
+#empleado_pago{
+    float: left;
+    margin-top: 50px;
+    background-color: rgba(0, 255, 255, 0.575);
+    width: 257px;
+    height: 156px;
+    text-align: center;
+    border-radius: 20px;
+    border: solid rgba(0, 0, 0, 0.87);
+}
+
+#sectEmpleado{
+    padding-left: 382px;
+    
+}
+
+#empleado{
+    width: 151px;
+    height: 25px;
+    background-color: #0096db96;
+    border-color: black;
+    border-radius: 5px;
+
+}
+
+#TextEmpleado{
+    font-family: cursive;
+    font-size: 20px;
+}
+
+#salario{
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(0, 255, 255, 0.575);
+    width: 257px;
+    height: 156px;
+    float: right;
+    border-radius: 20px;
+    border: solid rgba(0, 0, 0, 0.87);
+
+    
+}
+
+.clear{
+    clear: both;
+}
+
+#salarioText{
+    width: 151px;
+    height: 25px;
+    background-color: #0096db96;
+    border-color: black;
+    border-radius: 5px;
+}
+
+#sectSalario{
+    padding-right: 453px ;
+}
+
+#comicionesText{
+    width: 151px;
+    height: 25px;
+    background-color: #0096db96;
+    border-color: black;
+    border-radius: 5px;
+}
+
+#sectComicion{
+    padding-left: 852px;
+}
+
+#comiciones{
+    text-align: center;
+    margin-top: -167px;
+    background-color: rgba(0, 255, 255, 0.575);
+    width: 257px;
+    height: 156px;
+    border-radius: 20px;
+    border: solid rgba(0, 0, 0, 0.87);
+
+}
+
+#datosPago{
+    
+    background-color: rgba(2, 92, 92, 0.575);
+    width: 1920px ;
+    height: 443px;
+    margin-top: 1px;
+    padding-top: 165px;
+}
+
+#boton_pago{
+   
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 30px;
+    border: 2px solid #0016b0;
+}
+#boton_pago:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+#posBoton{
+    padding-left: 47%;
+}
+
+#pago_total{
+    background-color:rgba(2, 92, 92, 0.575) ;
+    width: 50%;
+    height: 90px;
+    margin-top: 75px;
+    margin-left: 519px;
+    border-radius: 80px;
+}
+
+#textResultado{
+    margin-top: 30px;
+    position: absolute;
+    margin-left: 10%;
+}
+
+#titulo_salario{
+    margin-top: 5px;
+    margin-left: 47%;
+    margin-bottom: -64px;
+}
+
+#textDocumento{
+    margin-top: 30px;
+    position: absolute;
+    margin-left: 10%;
+}
+
+#documentacion{
+    background-color:rgba(2, 92, 92, 0.575) ;
+    width: 50%;
+    height: 90px;
+    margin-top: 75px;
+    margin-left: 519px;
+    border-radius: 10px;
+}
+
+#pdf{
+    width: 50%;
+    margin-left: 518px;
+    margin-top: 10px;
+}
